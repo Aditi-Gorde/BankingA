@@ -1,6 +1,7 @@
  <?php
  $from = $_GET['id'];
-$conn=mysqli_connect("sql6.freemysqlhosting.net","sql6417933","N2sBfMWEYg","sql6417933");
+ $conn=mysqli_connect("bviwddg1tz90z0wafre4-mysql.services.clever-cloud.com", "uviuwebmnzw39gxi","cfNMc3nJk9obhTRRNk34", "bviwddg1tz90z0wafre4");
+//$conn=mysqli_connect("sql6.freemysqlhosting.net","sql6417933","N2sBfMWEYg","sql6417933");
 if(isset($_POST['submit']))
 {
      
@@ -100,7 +101,7 @@ if(isset($_POST['submit']))
 		}
         footer{
             position: absolute;
-            left: 42%;
+            left: 46%;
             bottom: 0%;
             color: #b0acac;
         }
@@ -130,22 +131,44 @@ if(isset($_POST['submit']))
     <nav class="navbar navbar-inverse" style="padding-top: 2px;">
             <div class="container-fluid">
               <div class="navbar-header">
-                <a class="navbar-brand" href="#">Spark Bank</a>
+                <a class="navbar-brand" href="#" style="color:#dfd3c3;">Spark Bank</a>
               </div>
               <ul class="nav navbar-nav  navbar-right">
-                <li><a href="home1.html">Home</a></li>
-                <li><a href="user1.php">Users</a></li>
-                <li class="active"><a href="tran.php?id=100">Transfer Money</a></li>
-                <li><a href="transaction.php">Transaction History</a></li>
+                <li><a href="index.html" style="color:#dfd3c3;">Home</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#dfd3c3;">Users<span class="caret"></span></a>
+                  <ul class="dropdown-menu" style="background-color: black; ">
+                <li><a href="newuser.php"  style="color:#dfd3c3;">Create User</a></li>
+                <li><a href="user1.php"  style="color:#dfd3c3;">Users</a></li>
+                  </ul>
+                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#dfd3c3;">Transaction<span class="caret"></span></a>
+                  <ul class="dropdown-menu" style="background-color: black; ">
+                <li class="active"><a href="tran.php?id=100"  style="color:#dfd3c3;">Transfer Money</a></li>
+                <li><a href="transaction.php"  style="color:#dfd3c3;">Transaction History</a></li>
+                <li><a href="Ufd.php" style="color:#dfd3c3;">FD Appliers</a></li>
+        <li><a href="ULoan.php" style="color:#dfd3c3;">Loan Appliers</a></li>
+                </ul>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#dfd3c3;">Services<span class="caret"></span></a>
+                  <ul class="dropdown-menu" style="background-color: black; ">
+                    <li><a href="p22.html" style="color:#dfd3c3;">Personal Loan</a></li>
+                    <li><a href="EMI1.html"  style="color:#dfd3c3;">EMI Calculator</a></li>
+                    <li><a href="FD.html"  style="color:#dfd3c3;">Fixed Deposit(FD)</a></li>  
+                    <li><a href="BROCHURE1.pdf" download="Brochure" style="color:#dfd3c3;">Download Brochure</a></li>
+                    
+            <li><a href="pdf.php"  style="color:#dfd3c3;">Generate Report</a></li>
+                </ul>
+
+                <li><a href="Contact.php" style="color:#dfd3c3;">Contact Us</a></li>
+
               </ul>
             </div>
           </nav><br><br><br>
  
 	<div class="container">
        
-     <h2 class="text-center pt-4" style="color : black;"><b>Transfer Money</b></h2>
+     <h2 class="text-center pt-4" style="color : #dfd3c3; font-family:auto"><b>Transfer Money</b></h2>
             <?php
-               $conn=mysqli_connect("sql6.freemysqlhosting.net","sql6417933","N2sBfMWEYg","sql6417933");
+              // $conn=mysqli_connect("sql6.freemysqlhosting.net","sql6417933","N2sBfMWEYg","sql6417933");
+              $conn=mysqli_connect("bviwddg1tz90z0wafre4-mysql.services.clever-cloud.com", "uviuwebmnzw39gxi","cfNMc3nJk9obhTRRNk34", "bviwddg1tz90z0wafre4");
                 $sid=$_GET['id'];
                 $sql = "SELECT * FROM  Users where Branch_Id=$sid";
                 $result=mysqli_query($conn,$sql);
@@ -176,7 +199,8 @@ if(isset($_POST['submit']))
         <select name="to" class="form-control" required>
             <option value="" disabled selected>Choose</option>
             <?php
-                 $conn=mysqli_connect("sql6.freemysqlhosting.net","sql6417933","N2sBfMWEYg","sql6417933");
+                // $conn=mysqli_connect("sql6.freemysqlhosting.net","sql6417933","N2sBfMWEYg","sql6417933");
+                $conn=mysqli_connect("bviwddg1tz90z0wafre4-mysql.services.clever-cloud.com", "uviuwebmnzw39gxi","cfNMc3nJk9obhTRRNk34", "bviwddg1tz90z0wafre4");
                 $sid=$_GET['id'];
                 $sql = "SELECT * FROM Users where Branch_Id!=$sid";
                 $result=mysqli_query($conn,$sql);
@@ -208,7 +232,7 @@ if(isset($_POST['submit']))
         </form>
     </div>
     <footer class="text-center mt-5 py-2">
-            <p>&copy 2021. Made by <b>Aditi Gorde</b> <br>Aditi Gorde Foundation</p>
+            <p>&copy 2021<br>A & D Foundation</p>
     </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
