@@ -1,0 +1,11 @@
+body{
+    background-image: url(https://livedemo00.template-help.com/wt_prod-20154/images/slider-9-1920x1328.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+table{
+    color:white !important;
+}
+.py-2{
+    text-align: center;
+}
